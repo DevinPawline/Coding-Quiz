@@ -107,3 +107,16 @@ function compare(event) {
         }
 
     }
+    // Question Index determines number question user is on
+    questionIndex++;
+
+    if (questionIndex >= questions.length) {
+        // All done will append last page with user score
+        allDone();
+        createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+    } else {
+        render(questionIndex);
+    }
+    questionsDiv.appendChild(createDiv);
+
+}
