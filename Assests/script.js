@@ -46,3 +46,21 @@ var holdInterval = 0;
 var penalty = 10;
 // Creates new element
 var ulCreate = document.createElement("ul");
+
+// Add event listender for timer on button, shows user a display on the screen
+timer.addEventListener("click", function () {
+    // Checking 0 because we set it as 0 above 
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time: " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = "Time's up!";
+            }
+        }, 1000);
+    }
+    render(questionIndex);
+});
