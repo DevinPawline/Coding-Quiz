@@ -1,6 +1,6 @@
 ## Coding Quiz 
 Deployable Link: 
-https://devinpawline.github.io/Coding-Quiz/
+https://devinpawline.github.io/CodingQuiz/
 
 ## Accepteance Critera 
 GIVEN I am taking a code quiz
